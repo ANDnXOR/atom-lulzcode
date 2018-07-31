@@ -1,14 +1,14 @@
 {
   "name": "atom-lulzcode",
   "main": "./lib/atom-lulzcode",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "AND!XOR DC26 LULZCODE Plugin for Atom",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "atom-lulzcode:toggle"
   },
-  "repository": "https://github.com/atom/atom-lulzcode",
+  "repository": "https://github.com/ANDnXOR/atom-lulzcode",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
