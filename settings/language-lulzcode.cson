@@ -1,0 +1,5 @@
+".source.lol":
+  editor:
+    increaseIndentPattern: "(HAI|WTF?|O RLY?|HOW DUZ I|OMGWTF)"
+    decreaseIndentPattern: "(KTHXBYE|KTHX|OIC|IF U SAY SO|GTFO)\\b"
+    commentStart: "BTW "

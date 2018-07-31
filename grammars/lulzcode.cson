@@ -1,0 +1,166 @@
+fileTypes: [
+  "lulz"
+]
+name: "Lolcode"
+patterns: [
+  {
+    captures:
+      "1":
+        name: "storage.type.function.lol"
+      "2":
+        name: "entity.name.function.lol"
+      "3":
+        name: "punctuation.definition.parameters.begin.lol"
+      "4":
+        name: "variable.parameter.function.lol"
+      "6":
+        name: "punctuation.definition.parameters.begin.lol"
+      "7":
+        name: "variable.parameter.function.lol"
+    comment: "match stuff like: HOW DUZ I <function name> [YR <argument1> [AN YR <argument2> ...]]"
+    match: "(HOW IZ I)\\s([a-zA-Z][\\w]*)\\s(YR)\\s(\\w*)(\\s(AN YR)\\s(\\w*))*"
+    name: "meta.function.lol"
+  }
+  {
+    comment: "closing a function"
+    match: "(IF U SAY SO|HOW IZ I)"
+    name: "storage.type.function.lol"
+  }
+  {
+    match: "\\b(HAI|KTHXBYE|I HAS A|HAS A|ITZ A|ITZ|R|IM IN YR|IM OUTTA YR|TIL|WILE|PLZ|AWSUM THX|O RLY?|YA RLY|NO WAI|MEBBE|OIC|WTF?|OMG|OMGWTF|FOUND YR|GTFO|AN YR|BOTH SAEM|SRS|YR)\\b"
+    name: "keyword.control.lol"
+  }
+  {
+    match: "\\b(ITZ)\\b"
+    name: "keyword.operator.assignment.lol"
+  }
+  {
+    match: "\\b(BOTH SAEM|AN|DIFFRINT)\\b"
+    name: "keyword.operator.comparison.lol"
+  }
+  {
+    match: "\\b(SUM OF|DIFF OF|PRODUKT OF|QUOSHUNT OF|MOD OF|BIGGR OF|SMALLR OF|IN MAH)\\b"
+    name: "keyword.operator.arithmetic.lol"
+  }
+  {
+    match: "\\b(BOTH OF|EITHER OF|WON OF|NOT|ALL OF|ANY OF)\\b"
+    name: "keyword.operator.logical.lol"
+  }
+  {
+    match: "\\b(UPPIN|NERFIN)\\b"
+    name: "keyword.operator.increment-decrement.lol"
+  }
+  {
+    match: "\\b(WIN)\\b"
+    name: "constant.language.boolean.true.lol"
+  }
+  {
+    match: "\\b(FAIL)\\b"
+    name: "constant.language.boolean.false.lol"
+  }
+  {
+    match: "\\b(YARN|NUMBR|NUMBAR|TROOF|BUKKIT|NOOB|LETR)\\b"
+    name: "storage.type.lol"
+  }
+  {
+    match: "\\b(PLZ|O NOES|O WEL|RTFM)\\b"
+    name: "keyword.control.catch-exception.lol"
+  }
+  {
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double.lol"
+    patterns: [
+      {
+        match: "\\\\\\\\."
+        name: "constant.character.escape.lol"
+      }
+    ]
+  }
+  {
+    captures:
+      "1":
+        name: "punctuation.definition.comment.lol"
+    match: "(BTW).*$\\n?"
+    name: "comment.line.btw.lol"
+  }
+  {
+    begin: "\\b(OBTW)\\b"
+    captures:
+      "0":
+        name: "punctuation.definition.comment.lol"
+    end: "(TLDR)\\n?"
+    name: "comment.block.lol"
+  }
+  {
+    match: "\\b(PLZ|O NOES|O WEL|KTHX|DO NOT WANT)\\b"
+    name: "keyword.control.catch-exception.lol"
+  }
+  {
+    match: "\\b(VISIBLE|BYES|DIAF|GIMMEH|SMOOSH|MKAY|CAN HAS|I IZ"+
+    "|BLINK|BLINKIES|LOLOL|WINK"+
+    "|MAEK"+
+    "|FREND"+
+    "|ALL|BOX|CATINABOX"+
+    "|CATINAROUND"+
+    "|CRAYON"+
+    "|CRAZY GO NUTS"+
+    "|CUT|GNAW"+
+    "|DAB"+
+    "|DOT"+
+    "|HOLLABACK"+
+    "|HSSSVEE2|HSSSVEE2BLINKY"+
+    "|HOW BIG|HOW SPREAD|HOW WIDE|HOW TALL"+
+    "|HOW MANY IN"+
+    "|INSIDEZ"+
+    "|KATNIP"+
+    "|BAD KITTEH|KITTEH"+
+    "|KOUNT"+
+    "|L33T|CHEEZBURGER"+
+    "|LOLOLOL"+
+    "|MAH|LAZER|MEOW|PAWS"+
+    "|MEMBER|OHIMEMBER" +
+    "|MEOWMIX"+
+    "|NACHOS"+
+    "|NOM|NOMS"+
+    "|POUNCE" +
+    "|RICK ROLL WIT" +
+    "|ROUND|ROYGEEBIF2|STRAIGHT"+
+    "|SHOUT"+
+    "|SYSTUM"+
+    "|TEH" +
+    "|TROLL" +
+    "|WHATSUP|WHATSDOWN|ISLEFF|ISRIGHT|WATTA|WATTB|ISGO" +
+    "|WHO DIS|SAY WUT"+
+    "|YO"+
+    ")\\b"
+    name: "support.function.lol"
+  }
+  {
+    match: "\\b(IT)\\b"
+    name: "variable.language.lol"
+  }
+  {
+    match: "\\b(BLUEISH"+
+    "|DARK"+
+    "|DARKISH"+
+    "|GREENISH"+
+    "|YELLOWISH"+
+    "|REDISH"+
+    "|LIGHT"+
+    "|HACKER_RED|HACKER_GREEN|HACKER_BLUE|HACKER_GRAY)\\b"
+    name: "constant.language.color"
+  }
+  {
+    match: "\\b(HOW WIDE"+
+    "|HOW TALL"+
+    "|BADGEZ?"+
+    "|OUTWAYZ|SIDEWAYZ|UPWAYZ|TILTZ"+
+    "|TIX"+
+    "|WHOAMI?"+
+    "|VERSHUN"+
+    ")\\b"
+    name: "constant.language.value"
+  }
+]
+scopeName: "source.lol"
