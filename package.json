@@ -1,10 +1,9 @@
 {
   "name": "atom-lulzcode",
   "main": "./lib/atom-lulzcode",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AND!XOR DC26 LULZCODE Plugin for Atom",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "atom-lulzcode:toggle"
   },
